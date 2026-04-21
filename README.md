@@ -1,16 +1,54 @@
-# React + Vite
+# Dance Academy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A comprehensive Dance Academy Web Application built with React and Vite. It features role-based dashboards (Admin, Trainer, Student), course tracking, a premium video player for tutorials, and beautiful modern UI elements.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Role-based Authentication Structure:** Access exclusive dashboards designed per role.
+- **Learning Interface:** A custom split-screen video player with scrollable playlists for online classes.
+- **Administrative Utilities:** Manage attendance, view payments, and organize classes directly.
+- **Clean Aesthetic UI:** Built using raw CSS features incorporating glassmorphism, soft gradients, and modern layout conventions.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Getting Started
 
-## Expanding the ESLint configuration
+Follow these steps to get a copy of the project running on your local machine.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+Make sure you have [Node.js](https://nodejs.org/) (LTS version) installed on your computer.
+
+### 1. Clone the project
+
+Open your terminal (or command prompt / Git Bash) and run:
+
+```bash
+git clone https://github.com/anushreekoparde-source/dance-academy.git
+```
+
+### 2. Navigate to the project directory
+
+```bash
+cd dance-academy
+```
+
+### 3. Install the dependencies
+
+This command downloads all the required libraries for the application to function:
+
+```bash
+npm install
+```
+
+### 4. Run the development server
+
+Start the application using:
+
+```bash
+npm run dev
+```
+
+### 5. Open the app
+
+Typically, the development server runs on `http://localhost:5173`. Open your web browser and navigate to that link to view the app!
