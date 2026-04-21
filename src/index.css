@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #8b5cf6;
+  --color-primary-hover: #7c3aed;
+  --color-secondary: #f43f5e;
+  --color-background-dark: #0f172a;
+  --color-surface-dark: #1e293b;
+  --color-border-dark: #334155;
+  --color-text-dark: #f8fafc;
+  --color-text-muted-dark: #94a3b8;
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  :root {
+    --bg-color: #f1f5f9;
+    --surface-color: #ffffff;
+    --border-color: #e2e8f0;
+    --text-color: #0f172a;
+    --text-muted: #64748b;
+  }
+
+  .dark {
+    --bg-color: #0b1121;
+    --surface-color: #131c31;
+    --border-color: #1e2d4a;
+    --text-color: #f1f5f9;
+    --text-muted: #64748b;
+  }
+
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-color) transparent;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-violet-600 hover:bg-violet-700 text-white px-5 py-2.5 rounded-xl transition-all duration-200 font-medium shadow-sm hover:shadow-md active:scale-[0.98] cursor-pointer;
+  }
+  .card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    @apply rounded-2xl shadow-sm p-5 transition-all;
+  }
+  .input-field {
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    @apply w-full rounded-xl px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent transition-all text-sm;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoom-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-zoom-in {
+  animation: zoom-in 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom select styling for dark mode */
+.dark select option {
+  background-color: #131c31;
+  color: #f1f5f9;
+}
